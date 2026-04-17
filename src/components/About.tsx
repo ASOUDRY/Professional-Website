@@ -1,14 +1,10 @@
-// components/About.js
-
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-// import '../component.css';
 
 const About = () => {
   return (
-    <div id="about" className="section">
+    <div id="about" className="page-section">
       <h2>About</h2>
-
       <div className="about">
         {/* <img src={profile} className="aboutImage" alt="profile" /> */}
 

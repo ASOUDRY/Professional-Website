@@ -34,7 +34,7 @@ const Projects = () => {
     </div>
   ));
   return (
-    <div id="project" className="section">
+    <div id="projects" className="page-section">
       <h2>Projects</h2>
       <div className='projects'>
         {renderedCards}
