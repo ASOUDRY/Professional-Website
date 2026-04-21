@@ -7,7 +7,8 @@ function NavigationBar() {
   const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id], div[id]");
+    // const sections = document.querySelectorAll("section[id], div[id]");
+    const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,12 +31,18 @@ function NavigationBar() {
         <Navbar.Brand href="#home">Welcome to My World</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
-          <Nav variant="pills" className="ms-auto" activeKey={activeSection}>
+          {/* <Nav variant="pills" className="ms-auto" activeKey={activeSection}>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
+          </Nav> */}
+          <Nav variant="pills" className="ms-auto" activeKey={activeSection}>
+  <Nav.Link eventKey="#home" href="#home">Home</Nav.Link>
+  <Nav.Link eventKey="#about" href="#about">About</Nav.Link>
+  <Nav.Link eventKey="#projects" href="#projects">Projects</Nav.Link>
+  {/* <Nav.Link eventKey="#contact" href="#contact">Contact</Nav.Link> */}
+</Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

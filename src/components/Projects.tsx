@@ -3,14 +3,19 @@ import Card from 'react-bootstrap/Card';
 
 const Projects = () => {
 
-  const data = [
-    { id: 1, name: 'Hehl', description: "A free to play online text-based dark fantasy game.", 
-    front: "https://github.com/ASOUDRY/Hehlma-Journey-of-Oil-and-Shadow",
-    back: "https://github.com/ASOUDRY/Hehl-Api"  },
-    { id: 2, name: 'Flumblr', 
-    description: "A mock social media application with features reminscent of a Twitter/Tumblr Hybrid", 
-    front: "https://github.com/ASOUDRY/Flumbr-Frontend",
-    back: "https://github.com/ASOUDRY/Flumblr-Backend"  },
+  const fullstack = [
+    { id: 1, name: 'Translate Extension', 
+    description: "A Chrome extension that produces a pop up for extracting, and translating text.", 
+    front: "https://github.com/ASOUDRY/Text-Capture-Extension",
+    back: "https://github.com/ASOUDRY/Text-Capture-Backend"
+    }
+  ];
+
+    const backend = [
+    { id: 2, name: 'AuthCore', 
+    description: "A light weight backend login service designed to be modular for multiple projects.", 
+    back: "https://github.com/ASOUDRY/AuthCore",  
+  },
   ];
 
   const cardStyle = {
@@ -19,7 +24,7 @@ const Projects = () => {
     margin: '20px'
   };
 
-  const renderedCards = data.map((item) => (
+  const fullstackCard = fullstack.map((item) => (
     <div key={item.id}>
       <Card style={cardStyle}>
         <Card.Body style={{ maxHeight: '220px', overflow: 'hidden' }}>
@@ -33,13 +38,30 @@ const Projects = () => {
       </Card>
     </div>
   ));
-  return (
-    <div id="projects" className="page-section">
-      <h2>Projects</h2>
-      <div className='projects'>
-        {renderedCards}
-      </div>
+    const backendCard = backend.map((item) => (
+    <div key={item.id}>
+      <Card style={cardStyle}>
+        <Card.Body style={{ maxHeight: '220px', overflow: 'hidden' }}>
+          <Card.Title>{item.name}</Card.Title>
+          <Card.Text>
+            {item.description}
+          </Card.Text>
+          <Button variant="primary">Link to Backend code</Button>
+        </Card.Body>
+      </Card>
     </div>
+  ));
+  return (
+    <section id="projects" className="page-section">
+      <div className="section-content">
+      <h2>Projects</h2>
+      <p>My latest projects</p>
+      <div className='projects'>
+        {fullstackCard}
+        {backendCard}
+      </div>
+      </div>
+    </section>
   );
 };
 
