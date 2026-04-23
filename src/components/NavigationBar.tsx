@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../css/nav.css"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -28,7 +29,7 @@ function NavigationBar() {
   return (
     <Navbar expand="lg" bg="light" className="border-bottom sticky-top w-100">
       <Container fluid className="px-4">
-        <Navbar.Brand href="#home">Welcome to My World</Navbar.Brand>
+     <Navbar.Brand href="#home">Alexander Soudry</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
           {/* <Nav variant="pills" className="ms-auto" activeKey={activeSection}>

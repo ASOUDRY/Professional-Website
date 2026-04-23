@@ -1,57 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
 .page-section {
   min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.about-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.about {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.aboutSecond {
-  flex: 1;
-}
-
-.aboutImage {
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.about-content h2,
-.about-content p,
-.about-content ul {
-  text-align: left;
+  padding: 2rem 0;
 }
 
 .section-content {
   width: 100%;
   max-width: 1000px;
-}
-
-.projects {
-  display: flex;
-    flex-direction: row;
-}
-
-.nav-pills .nav-link.active {
-  background: red !important;
-  color: white !important;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .site-frame {
@@ -60,18 +38,53 @@
   padding-inline: clamp(1rem, 4vw, 3rem);
 }
 
-
-.footer-content {
-  /* background-color: blue; */
-  color: black;
+.nav-pills .nav-link.active {
+  background: #6B8F71 !important;
+  color: white !important;
 }
 
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-  }
+.btn-custom-primary {
+  background-color: #6B8F71 !important;
+  border: 1px solid #6B8F71 !important;
+  color: #ffffff !important;
+  padding: 0.65rem 1.2rem !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
 
-  .aboutImage {
-    width: 200px;
-  }
+.btn-custom-primary:hover {
+  background-color: #5c7b61 !important;
+  border-color: #5c7b61 !important;
+  color: #ffffff !important;
+}
+
+.btn-custom-secondary {
+  background-color: #ffffff !important;
+  border: 1px solid #6B8F71 !important;
+  color: #6B8F71 !important;
+  padding: 0.65rem 1.2rem !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.btn-custom-secondary:hover {
+  background-color: #6B8F71 !important;
+  border-color: #6B8F71 !important;
+  color: #ffffff !important;
+}
+
+.btn-custom-primary:focus,
+.btn-custom-primary:active,
+.btn-custom-secondary:focus,
+.btn-custom-secondary:active {
+  box-shadow: none !important;
+}
+
+.home-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
 }

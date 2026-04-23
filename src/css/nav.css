@@ -1,0 +1,9 @@
+.navbar-brand {
+  color: #111111 !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-brand:hover {
+  color: #6B8F71 !important;
+}

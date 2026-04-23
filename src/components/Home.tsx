@@ -5,20 +5,25 @@ const Home = () => {
       <div className="section-content">
         <h1>Alexander Soudry</h1>
         <h1> I build secure backend systems and practical web tools with Java, Spring Boot, React, and TypeScript.</h1>
-        <Button
-          onClick={() => {
-          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-        }}
-        >
-          About Me.
-        </Button>
-          <Button
-          onClick={() => {
-          document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-        }}
-        >
-          Recent Projects.
-        </Button>
+       <div className="home-actions">
+  <Button
+    className="btn-custom-primary"
+    onClick={() => {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
+    About Me
+  </Button>
+
+  <Button
+    className="btn-custom-secondary"
+    onClick={() => {
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
+    Recent Projects
+  </Button>
+</div>
       </div>
     </section>
   );

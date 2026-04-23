@@ -38,38 +38,34 @@ const Projects = () => {
             <Card key={item.id} className="project-card">
               <Card.Body>
                 <span className="project-type">{item.type}</span>
-
                 <Card.Title>{item.name}</Card.Title>
-
                 <Card.Text>{item.description}</Card.Text>
-
                 <p className="project-stack">
                   <strong>Stack:</strong> {item.stack.join(", ")}
                 </p>
-
                 <div className="project-links">
-                  {item.front && (
-                    <Button
-                      href={item.front}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="dark"
-                    >
-                      Frontend Code
-                    </Button>
-                  )}
+  {item.front && (
+    <Button
+      href={item.front}
+      target="_blank"
+      rel="noreferrer"
+      className="btn-custom-primary"
+    >
+      Frontend Code
+    </Button>
+  )}
 
-                  {item.back && (
-                    <Button
-                      href={item.back}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="outline-dark"
-                    >
-                      Backend Code
-                    </Button>
-                  )}
-                </div>
+  {item.back && (
+    <Button
+      href={item.back}
+      target="_blank"
+      rel="noreferrer"
+      className="btn-custom-secondary"
+    >
+      Backend Code
+    </Button>
+  )}
+</div>
               </Card.Body>
             </Card>
           ))}
